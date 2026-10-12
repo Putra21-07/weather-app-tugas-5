@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App - Tugas Rutin 5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h2>Weather App</h2>
+    
+    <!-- Form Pencarian -->
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Masukkan nama kota..." required />
+      <button type="submit">Cari</button>
+    </form>
+
+    <!-- Riwayat Pencarian (LocalStorage) -->
+    <div id="history-container" class="history-container"></div>
+
+    <!-- Toggle Unit Suhu -->
+    <div class="unit-toggle">
+      <span>Unit Suhu:</span>
+      <button id="btn-celsius" class="active">°C</button>
+      <button id="btn-fahrenheit">°F</button>
+    </div>
+
+    <!-- Indicator Loading -->
+    <div id="loading" class="loading hidden">Memuat data cuaca...</div>
+
+    <!-- Pesan Error -->
+    <div id="error-msg" class="error-msg hidden"></div>
+
+    <!-- Tampilan Cuaca Saat Ini -->
+    <div id="weather-info" class="weather-info hidden">
+      <h3 id="city-name"></h3>
+      <div class="weather-main">
+        <img id="weather-icon" src="" alt="Icon Cuaca" />
+        <div class="temp-box">
+          <span id="temperature"></span>
+        </div>
+      </div>
+      <p id="description" class="description"></p>
+      <p class="humidity">Kelembaban: <strong id="humidity"></strong>%</p>
+    </div>
+
+    <!-- Forecast 5 Hari -->
+    <div id="forecast-section" class="forecast-section hidden">
+      <h4>Prakiraan Cuaca 5 Hari</h4>
+      <div id="forecast-container" class="forecast-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
